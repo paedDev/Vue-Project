@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, reactive } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
+import { useToast } from 'vue-toastification'
 import {
   ArrowLeft,
   Pencil,
@@ -15,6 +16,7 @@ import {
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 import axios from 'axios'
 
+const toast = useToast()
 const route = useRoute()
 const router = useRouter()
 const jobId = route.params.id
@@ -44,11 +46,13 @@ const deleteJob = async () => {
     state.isLoading = true
     if (confirm('Are you sure you want to delete this Job Post?')) {
       const response = await axios.delete(`/api/jobs/${jobId}`)
+      toast.success('Succesfully deleted a Job Post')
       router.push('/jobs')
     }
   } catch (error) {
     state.error = error
     console.error('Failed to fetch job:', error)
+    toast.error('Failed to delete a Job Post')
   } finally {
     state.isLoading = false
   }

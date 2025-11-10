@@ -10,7 +10,7 @@ const toggleIsOpen = () => {
 }
 </script>
 <template>
-  <div class="max-w-7xl mx-auto text-gray-600 bg-white shadow-lg mt-2">
+  <div class="max-w-8xl mx-auto text-gray-600 bg-white shadow-lg mt-2">
     <div class="lg:p-6 p-4">
       <!-- Desktop Menu -->
       <div class="flex justify-between items-center">

@@ -4,6 +4,8 @@ import Joblisting from './Joblisting.vue'
 import { RouterLink } from 'vue-router'
 import axios from 'axios'
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import { gsap } from 'gsap'
+
 defineProps({
   limit: Number,
   showButton: {
@@ -11,11 +13,21 @@ defineProps({
     default: false,
   },
 })
+onMounted(async () => {})
 const state = reactive({
   jobs: [],
   isLoading: true,
 })
 onMounted(async () => {
+  const timeline = gsap.timeline()
+  timeline.to('#job-listings-title', {
+    y: -10,
+    opacity: 1,
+    duration: 1,
+    ease: 'power2.out',
+  })
+
+  // Axios call to fetch jobs
   try {
     const response = await axios.get('/api/jobs')
     state.jobs = response.data
@@ -28,9 +40,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section class="max-w-7xl mx-auto">
+  <section class="max-w-8xl mx-auto">
     <div class="bg-blue-50 px-4 py-10">
-      <h2 class="text-3xl font-bold text-green-500 mb-6 text-center">Browse Jobs</h2>
+      <h2 class="text-3xl font-bold text-green-500 mb-6 text-center" id="job-listings-title">
+        Browse Jobs
+      </h2>
       <!-- Loading  -->
       <div v-if="state.isLoading" class="text-center text-gray-500 py-6">
         <PulseLoader />
