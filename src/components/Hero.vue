@@ -114,7 +114,7 @@ onMounted(() => {
   <section class="relative min-h-screen overflow-hidden" id="pin">
     <!-- Hero Section (Behind) -->
     <div
-      class="py-20 px-4 bg-gradient-to-br from-green-50 to-emerald-100 min-h-screen flex items-center justify-center"
+      class="py-20 px-4 bg-linear-to-br from-green-50 to-emerald-100 min-h-screen flex items-center justify-center"
     >
       <div id="hero-content" class="max-w-4xl mx-auto text-center opacity-0">
         <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
@@ -143,7 +143,7 @@ onMounted(() => {
     <!-- Overlay that slides up -->
     <div
       id="overlay"
-      class="absolute inset-0 z-50 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center"
+      class="absolute inset-0 z-50 bg-linear-to-br from-gray-50 to-gray-100 flex items-center justify-center"
     >
       <div class="flex flex-col items-center justify-center">
         <!-- PIN Text that scales up -->
@@ -177,7 +177,7 @@ onMounted(() => {
       <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Why Choose Us?</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div
-          class="p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+          class="p-8 bg-linear-to-br from-green-50 to-emerald-50 rounded-xl shadow-md hover:shadow-xl transition-shadow"
         >
           <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,7 +195,7 @@ onMounted(() => {
           </p>
         </div>
         <div
-          class="p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+          class="p-8 bg-linear-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md hover:shadow-xl transition-shadow"
         >
           <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,7 +213,7 @@ onMounted(() => {
           </p>
         </div>
         <div
-          class="p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+          class="p-8 bg-linear-to-br from-purple-50 to-pink-50 rounded-xl shadow-md hover:shadow-xl transition-shadow"
         >
           <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
